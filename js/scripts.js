@@ -187,5 +187,19 @@ $(window).load(function() {
 		});
 	});
 
+	$(function() {
+		$(".navbar-nav li a").click(function(){
+			$(".nav-list").slideToggle();
+		});
+	});
+
+	$(function() {
+		$(".navbar-nav li a").keypress(function(e){
+			if (e.keyCode == 13) {
+				$(".nav-list").slideToggle();
+			}
+		});
+	});
+
 
 });
