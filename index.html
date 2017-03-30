@@ -26,24 +26,38 @@
 	<header id="home">
 		<nav role="navigation" class="navbar navbar-default navbar-fixed-top">
 			<div class="container-fluid">
+				
 				<div class="navbar-header">
-					<a class="navbar-brand" href="#">BBL</a>
-					<ul class="nav navbar-nav">
-						<li><a href="#intro">Introducción</a></li>
-						<li><a href="#features">Areas de aplicación</a></li>
-						<li><a href="#responsive">Como trabajamos</a></li>
-						<li><a href="#portfolio">Portfolio</a></li>
-						<li><a href="#team">Estamos contratando</a></li>
-						<li><a href="#contact">Contacto</a></li>
-					</ul>
+					<a class="navbar-brand" href="#">bigbang<span class="lighter">lab</span></a>
+
+					<div id="menu-container" tabindex="0">
+						<span class="menu">Menu</span>
+						<div id="nav-icon">
+							<span></span><span></span><span></span><span></span>
+						</div>
+					</div>
+
+					<!-- Expandable Menu -->
+					<div class="nav-list">
+						<ul class="nav navbar-nav">
+							<li><a href="#intro">Introducción</a></li>
+							<li><a href="#features">Areas de aplicación</a></li>
+							<li><a href="#responsive">Como trabajamos</a></li>
+							<li><a href="#portfolio">Portfolio</a></li>
+							<li><a href="#team">Estamos contratando</a></li>
+							<li><a href="#contact">Contacto</a></li>
+						</ul>
+					</div>
+
 				</div>
+
 			</div>
 		</nav>
 		<section class="hero" id="hero">
 			<div class="container">
 				<div class="row">
 					<div class="col-md-8 col-md-offset-2 text-center inner">
-						<h1 class="animated fadeInDown">BIGBANG<span>LAB</span></h1>
+						<h1 class="animated fadeInDown">bigbang<span>lab</span></h1>
 						<p class="animated fadeInUp delay-05s">Expandiendo limites <em>creativos y tecnologicos</em></p>
 					</div>
 				</div>
@@ -59,7 +73,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 wp1">
-					<h1 class="arrow">Quienes son y que hacen en Big Bang Lab?</h1>
+					<h1 class="arrow">¿Quiénes somos?</h1>
 					<p>Somos un grupo de jovenes profesionales amantes y expertos en tecnologia que usamos nuestros conocimientos  para desarrollar soluciones informaticas creativas, valorando al usuario y poniendo el foco en el negocio que el cliente quiere implementar</p>
 					<p>Aportamos ideas a nuestros clientes sugiriendo como usar los avances tecnologicos para mejorar las relaciones que tienen sus usuarios/clientes y con los servicios y productos que brindan.</p>
 				</div>
@@ -71,7 +85,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h1 class="arrow">En que somos expertos?</h1>
+					<h1 class="arrow">Nuestra experiencia</h1>
 					<div class="features-wrapper">
 						<div class="col-md-3 wp2">
 							<div class="icon">
@@ -112,10 +126,9 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8 col-md-offset-2 wp1">
-					<h1 class="arrow">Como trabajamos en Big Bang Lab?</h1>
-					<p>En Big Bang Lab nuestros clientes son nuestros socios, si ellos son exitosos, nosotros tambien. Por ello usamos metodologias de trabajo en donde la participacion del cliente es fundamental.</p>
-					<p>En nuestro equipo contamos con expertos en metodologias agiles y hacemos participar al cliente desde el comienzo del proyecto. Ante cada release de la solucion validamos con el cliente para realizar ajustes en el proyecto.</p>
-					<p>Obteniendo proyectos mas ajustados a los cronogramas pactados y nos aseguramos la satifaccion del cliente con el producto final.</p>
+					<h1 class="arrow">Worfflow iteration</h1>
+					<p>En Big Bang Lab nuestros clientes son nuestros socios, si ellos son exitosos, nosotros también. Por ello usamos metodologias de trabajo en donde la participación del cliente es fundamental.</p>
+					<p>En nuestro equipo contamos con expertos en metodologías ágiles y hacemos participar al cliente desde el comienzo del proyecto. Ante cada release de la solucion validamos con el cliente para realizar ajustes en el proyecto. Obteniendo proyectos mas ajustados a los cronogramas pactados y nos aseguramos la satifaccion del cliente con el producto final.</p>
 				</div>
 			</div>
 		</div>
@@ -218,7 +231,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-12">
-					<h1 class="arrow">Te estamos buscando! Sumate a Big Bang</h1>
+					<h1 class="arrow">Trabajar con nosotros</h1>
 				</div>
 			</div>
 			<div class="row">
@@ -300,7 +313,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-12">
-				<h1 class="arrow">Contactate con el equipo de Big Bang Lab</h1>
+				<h1 class="arrow">Contactate con nosotros!</h1>
 			</div>
 		</div>
 
@@ -310,13 +323,14 @@
 				<input type="text" id="input-email" name="email" placeholder="Email">
 				<input type="text" id="input-telefono" name="telefono" placeholder="Telefono">
 				<select type="text" id="input-subject" name="subject" placeholder="Que servicio necesitas de Big Bang?">
-					<option>User Experience</option>
-					<option>Graphic Design</option>
-					<option>Product Design</option>
+					<option>Diseño UX</option>
+					<option>Diseño Gráfico</option>
+					<option>Programación Frontend</option>
+					<option>Programación Backend</option>
 				</select>
 			</fieldset>
 			<fieldset class="half right cf">
-				<textarea name="message" type="text" name="mensaje" id="input-message" placeholder="Contanos en que te podemos ayudar"></textarea>
+				<textarea name="message" type="text" name="mensaje" id="input-message" placeholder="¿En qué podemos ayudarte?"></textarea>
 			</fieldset>  
 			<input type="submit" value="Envia la consulta" id="input-submit">
 		</form>
@@ -334,7 +348,7 @@
 				</ul>
 			</div>
 			<div class="col-md-6 credit">
-				<p>Contacta a Big Bang <a href="mailto:info@bigbanglab.com.ar"><em>info@bigbanglab.com.ar</em></a></p>
+				<p>Escribinos a <a href="mailto:info@bigbanglab.com.ar">info@bigbanglab.com.ar</a></p>
 			</div>
 		</div>
 	</div>

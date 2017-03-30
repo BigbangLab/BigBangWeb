@@ -169,4 +169,23 @@ $(window).load(function() {
 		}
 	});
 
+	
+
+	$(function() {
+		$("#menu-container").click(function(){
+			$(".nav-list").slideToggle();
+			$("#nav-icon").toggleClass('open');
+		});
+	});
+
+	$(function() {
+		$("#menu-container").keypress(function(e){
+			if (e.keyCode == 13) {
+				$(".nav-list").slideToggle();
+				$("#nav-icon").toggleClass('open');
+			}
+		});
+	});
+
+
 });
