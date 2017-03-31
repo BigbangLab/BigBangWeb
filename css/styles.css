@@ -1263,7 +1263,7 @@ Waypoints
 	font-size: 22px;
 	letter-spacing: 1px;
 	font-weight: bold;
-	padding: 1.4rem 1.2rem;
+	padding: 1.4rem 0rem;
 }
 .navbar-brand span {
 }
@@ -1324,7 +1324,7 @@ Waypoints
 	float: right;
 	display: flex;
     align-items: center;
-    padding: 1.4rem 1.2rem;
+    padding: 1.4rem 0rem;
 }   
 #menu-container .menu {
 	color: #ffffff;
