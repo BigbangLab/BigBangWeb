@@ -384,7 +384,7 @@ input[type="search"]::-webkit-search-decoration {
 }
 /* * Removes inner padding and border in Firefox 3+. */
 
-button::-moz-focus-inner,
+button::-moz-focus-inner,"\f121"
 input::-moz-focus-inner {
 	border: 0;
 	padding: 0;
@@ -1295,19 +1295,16 @@ Waypoints
 .navbar-nav {
 	clear: both;
 	margin: 0 auto;
-	padding: 0 1.2rem;
 }
 
 .navbar-nav li {
-	border-bottom: dotted 1px #fff;
+	border-bottom: solid 1px #fff;
 }
-
 
 .navbar-default .navbar-nav > li > a {
 	color: #ffffff;
 	padding: 20px 0px;
 }
-
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
 	color: #0066CC;
@@ -1331,20 +1328,42 @@ Waypoints
 	text-transform: uppercase;
 }
 
+
 /* Ocultar Menu Container en iPad+ */
 @media only screen and (min-width: 768px) {
-	
-	#menu-container {
-		/*display: none;*/
-	}	
 
-	.navbar-nav {
+	.nav.navbar-nav {
+		width: 100%;
+	}
+	.nav.navbar-nav li{
+		width: 100%;
+	}
+
+} 
+
+/* Desktop */
+@media screen and (min-width: 1200px) {
+
+	#menu-container {
+		display: none;
+	}
+
+	.nav-list {
+		display: block !important;
+		border: none;
+		clear: none;
+		float: right;
+	}
+
+	.nav.navbar-nav {
 		float: none;
+		padding: 0 1.2rem;
 	}
 	
-	.navbar-nav > li{
-		width: 100%;
-		margin: 0	
+	.nav.navbar-nav > li{
+		width: auto;
+		margin: 0;
+		border-bottom: none;
 	}
 	
 	.navbar-default .navbar-nav > li > a {
@@ -1352,8 +1371,21 @@ Waypoints
 		padding: 20px 0px;
 		margin: 0 auto;
 	}
+	.navbar-default .navbar-nav > li > a:after {
+		content: "|";
+		padding: 0 10px;
+	}
+	.navbar-default .navbar-nav > li:last-child > a:after {
+		content: "";
+	} 
 
-} 
+	.navbar-header { 
+		width: auto;
+	}
+
+}
+
+
 
 /* Menu Button */
 .menu {
