@@ -807,7 +807,7 @@ Portfolio
 	display: block;
 	position: absolute;
 	z-index: 20;
-	background: rgba(100, 194, 158, 0.8);
+	background: rgba(0, 169, 226, 0.8);
 	overflow: hidden;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
@@ -866,20 +866,16 @@ a.expand {
 	opacity: 1;
 }
 .img img {
-	width: -webkit-calc(100% + 40px) !important;
-	width: calc(100% + 40px) !important;
-	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-	transition: opacity 0.35s, transform 0.35s;
-	-moz-transition: opacity 0.35s, -moz-transform 0.35s;
-	-o-transition: opacity 0.35s, -o-transform 0.35s;
-	-webkit-transform: translate3d(-40px, 0, 0);
-	transform: translate3d(-40px, 0, 0);
-	-ms-transform: translate3d(-40px, 0, 0);
+	width: -webkit-calc(100% ) !important;
+	-webkit-transition: all 0.5s linear;
+          transition: all 0.5s linear;
+  	-webkit-transform: scale3d(1, 1, 1);
+          transform: scale3d(1, 1, 1);
+          
 }
 .img:hover img {
-	-webkit-transform: translate3d(0, 0, 0);
-	transform: translate3d(0, 0, 0);
-	-ms-transform: translate3d(-40px, 0, 0);
+  -webkit-transform: scale3d(1.2, 1.2, 1);
+        transform: scale3d(1.2, 1.2, 1);
 }
 .designs {
 	position: absolute;
