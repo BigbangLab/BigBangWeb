@@ -103,11 +103,11 @@ $(document).ready(function(){
     }
 });
 
-
 /***************** Mail ******************/
-$('#input-submit').click(function()
-{
-
+$("#input-submit").on("click", function(){
+	if($("#form-email")[0].checkValidity())
+	{
+	    
 	var data = {
 	    nombre: $('#input-nombre').val(),
         email: $('#input-email').val(),
@@ -129,7 +129,14 @@ $('#input-submit').click(function()
             alert('Email Sent');
         }               
     });
+
+	}
+	else
+	{
+	  return 0;
+	}
 });
+
 
 
 /***************** Flexsliders ******************/

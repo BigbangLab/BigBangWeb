@@ -318,20 +318,21 @@
 			</div>
 		</div>
 
-		<form>
+		<form  id="form-email" action="javascript:0">
 			<fieldset class="half left cf">
-				<input type="text"  id="input-nombre" name="nombre" placeholder="Nombre">
-				<input type="text" id="input-email" name="email" placeholder="Email">
+				<input type="text"  id="input-nombre" name="nombre" placeholder="Nombre (obligatorio)" required>
+				<input type="email" id="input-email" name="email" placeholder="Email (obligatorio)" required>
 				<input type="text" id="input-telefono" name="telefono" placeholder="Telefono">
-				<select type="text" id="input-subject" name="subject" placeholder="Que servicio necesitas de Big Bang?">
+				<select type="text" id="input-subject" name="subject" placeholder="Que servicio necesitas de Big Bang?" required>
 					<option>Diseño UX</option>
 					<option>Diseño Gráfico</option>
 					<option>Programación Frontend</option>
 					<option>Programación Backend</option>
+					<option>Otro</option>
 				</select>
 			</fieldset>
 			<fieldset class="half right cf">
-				<textarea name="message" type="text" name="mensaje" id="input-message" placeholder="¿En qué podemos ayudarte?"></textarea>
+				<textarea name="message" type="text" name="mensaje" id="input-message" placeholder="¿En qué podemos ayudarte? (obligatorio)" required></textarea>
 			</fieldset>  
 			<input type="submit" value="Envia la consulta" id="input-submit">
 		</form>
