@@ -1,3 +1,8 @@
+
+	
+	
+
+
 /***************** Waypoints ******************/
 
 $(document).ready(function() {
@@ -143,12 +148,13 @@ $("#input-submit").on("click", function(){
 
 $(window).load(function() {
 
+
 	$('#portfolioSlider').flexslider({
 		animation: "slide",
 		directionNav: false,
 		controlNav: true,
 		touch: false,
-		pauseOnHover: true,
+		pauseOnHover: false,
 		start: function() {
 			$.waypoints('refresh');
 		}
@@ -209,4 +215,40 @@ $(window).load(function() {
 	});
 
 
+var query = window.matchMedia("(max-width: 780px)");
+	query.addListener(mediaChange);
+
 });
+
+function mediaChange(query) {
+  if(query.matches) {
+    //We are 780px or below, disable flexslider animation
+    console.log(" stop");
+    
+    $('#portfolioSlider').flexslider('pause');
+    $('.flex-control-nav.flex-control-paging').hide();
+  } else {
+  	console.log("start");
+    //We are above 780px, enable flexslider animation
+    $('#portfolioSlider').flexslider('play');
+    $('.flex-control-nav.flex-control-paging').show();
+  }
+};
+
+function flexdestroy(selector) {
+  var el = $(selector);
+  var elClean = el.clone();
+
+  elClean.find('.flex-viewport').children().unwrap();
+  elClean
+    .removeClass('flexslider')
+    .find('.clone, .flex-direction-nav, .flex-control-nav')
+      .remove()
+      .end()
+    .find('*').removeAttr('style').removeClass (function (index, css) {
+      return (css.match (/\bflex\S+/g) || []).join(' ');
+    });  
+
+  elClean.insertBefore(el);
+  el.remove();        
+}
