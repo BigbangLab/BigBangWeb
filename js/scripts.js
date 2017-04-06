@@ -160,17 +160,6 @@ $(window).load(function() {
 		}
 	});
 
-	$('#servicesSlider').flexslider({
-		animation: "slide",
-		directionNav: false,
-		controlNav: true,
-		touch: true,
-		pauseOnHover: true,
-		start: function() {
-			$.waypoints('refresh');
-		}
-	});
-
 	$('#teamSlider').flexslider({
 		animation: "slide",
 		directionNav: false,
@@ -215,6 +204,7 @@ $(window).load(function() {
 	});
 
 
+
 var query = window.matchMedia("(max-width: 780px)");
 	query.addListener(mediaChange);
 
@@ -226,12 +216,15 @@ function mediaChange(query) {
     console.log(" stop");
     
     $('#portfolioSlider').flexslider('pause');
+    $('#teamSlider').flexslider('pause');
     $('.flex-control-nav.flex-control-paging').hide();
   } else {
   	console.log("start");
     //We are above 780px, enable flexslider animation
     $('#portfolioSlider').flexslider('play');
+    $('#teamSlider').flexslider('play');
     $('.flex-control-nav.flex-control-paging').show();
+
   }
 };
 
