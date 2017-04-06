@@ -149,28 +149,32 @@ $("#input-submit").on("click", function(){
 $(window).load(function() {
 
 
-	$('#portfolioSlider').flexslider({
-		animation: "slide",
-		directionNav: false,
-		controlNav: true,
-		touch: false,
-		pauseOnHover: false,
-		start: function() {
-			$.waypoints('refresh');
-		}
-	});
+	if (window.matchMedia("(min-width: 780px)").matches)
+	{
+		//creo flex si es mayor a 780
 
-	$('#teamSlider').flexslider({
-		animation: "slide",
-		directionNav: false,
-		controlNav: true,
-		touch: true,
-		pauseOnHover: true,
-		start: function() {
-			$.waypoints('refresh');
-		}
-	});
+		$('#portfolioSlider').flexslider({
+			animation: "slide",
+			directionNav: false,
+			controlNav: true,
+			touch: false,
+			pauseOnHover: false,
+			start: function() {
+				$.waypoints('refresh');
+			}
+		});
 
+		$('#teamSlider').flexslider({
+			animation: "slide",
+			directionNav: false,
+			controlNav: true,
+			touch: true,
+			pauseOnHover: true,
+			start: function() {
+				$.waypoints('refresh');
+			}
+		});
+	}
 	
 
 	$(function() {
@@ -211,20 +215,51 @@ var query = window.matchMedia("(max-width: 780px)");
 });
 
 function mediaChange(query) {
+
   if(query.matches) {
-    //We are 780px or below, disable flexslider animation
-    console.log(" stop");
-    
+    //Mas de 780px
+
+    $('#portfolioSlider').flexslider(0);
     $('#portfolioSlider').flexslider('pause');
+
+    $('#teamSlider').flexslider(0);
     $('#teamSlider').flexslider('pause');
     $('.flex-control-nav.flex-control-paging').hide();
   } else {
-  	console.log("start");
-    //We are above 780px, enable flexslider animation
-    $('#portfolioSlider').flexslider('play');
-    $('#teamSlider').flexslider('play');
-    $('.flex-control-nav.flex-control-paging').show();
+    //mas de 780px me fijo si esta creado el slider, si no esta lo creo
+    
+    if (!$("#portfolioSlider").data('flexslider'))
+	{
+		//creo si no esta
+		$('#portfolioSlider').flexslider({
+			animation: "slide",
+			directionNav: false,
+			controlNav: true,
+			touch: false,
+			pauseOnHover: false,
+			start: function() {
+				$.waypoints('refresh');
+			}
+		});
 
+		$('#teamSlider').flexslider({
+			animation: "slide",
+			directionNav: false,
+			controlNav: true,
+			touch: true,
+			pauseOnHover: true,
+			start: function() {
+				$.waypoints('refresh');
+			}
+		});	
+	}
+	else
+	{
+		//ejecuto si esta
+	    $('#portfolioSlider').flexslider('play');
+	    $('#teamSlider').flexslider('play');
+	    $('.flex-control-nav.flex-control-paging').show();
+	}
   }
 };
 
